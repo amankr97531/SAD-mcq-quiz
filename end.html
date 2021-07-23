@@ -45,6 +45,7 @@
 		     <h3 class="user_name">Well Done!!</h3><h4><span class="name"></span></h4>
 			 <p class="user_points">Your Score: <span class="points">30</span></p>
 			 <p class="user_time"> Time Taken: <span class="time"></span></p>
+			   <A>Answer <a href="answer.html">CLICK HERE</A>
 		   </BR></BR>
 		   </div>
 		   </br>
@@ -53,6 +54,24 @@
 	    </div>
 	<script src="userinfo.js"></script>
 	
-	
+	<script>
+	      window.oncontextmenu=function ()
+		  {
+		  console.log("Right click Disabled");
+		  return false;
+		  }
+	</script>
+						    <script>
+    /*function check(e)
+    {
+    alert(e.keyCode);
+    }*/
+    document.onkeydown = function(e) {
+            if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {//Alt+c, Alt+v will also be disabled sadly.
+                alert('not allowed');
+            }
+            return false;
+    };
+    </script>
 	</body>
 	</html>
